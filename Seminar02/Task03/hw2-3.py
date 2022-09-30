@@ -9,5 +9,8 @@ def sum_of_list(num):
     return numlist
 
 
-n = int(input("Input N  "))
-print(f"{sum_of_list(n)} -> {sum(sum_of_list(n))}")
+try:
+    n = int(input("Input N  "))
+    print(f"{sum_of_list(n)} -> {sum(sum_of_list(n))}")
+except ValueError:
+    print("Pls, enter only integer")
