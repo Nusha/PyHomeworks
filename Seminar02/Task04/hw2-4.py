@@ -9,8 +9,7 @@
 def make_list_elem(numele):
     listelem = []
     for i in range(-numele, numele + 1):
-        listelem.append(-numele)
-        numele += - 1
+        listelem.append(i)
     return listelem
 
 
