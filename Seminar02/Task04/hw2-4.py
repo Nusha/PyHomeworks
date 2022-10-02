@@ -18,7 +18,7 @@ try:
     pos_2 = int(input("Input position 2: "))
     num = int(input("Number of elements: "))
 
-    if pos_1 > (num * 2 + 1) or pos_2 > (num * 2 + 1) or pos_1 <= 0 >= pos_2:
+    if pos_1 > (num * 2 + 1) or pos_2 > (num * 2 + 1) or pos_1 <= 0 or pos_2 <= 0:
         print(f"Error. Index out of range, position 1 and position 2 must be in range from 1 to {num * 2 + 1}. ")
     else:
         print(make_list_elem(num))
