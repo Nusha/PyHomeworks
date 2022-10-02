@@ -15,6 +15,9 @@ def find_fact(num):
 
 try:
     number = int(input("Input N: "))
-    print(find_fact(number))
+    if number < 1:
+        print("N can not be less than 1.")
+    else:
+        print(find_fact(number))
 except:
     print("Error. Please enter only integer.")
