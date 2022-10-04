@@ -25,7 +25,7 @@ def make_seq_list(n):
 
 
 try:
-    num = int(input("Please enter positive positive number for fibonacci sequence: "))
+    num = int(input("Please enter positive number for fibonacci sequence: "))
     if num < 0:
         print("Error. Pls, only positive numbers.")
     else:
