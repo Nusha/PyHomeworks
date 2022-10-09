@@ -13,10 +13,16 @@
 import winsound
 import decimal
 
+
+def accurate_number(number, accuracy):
+    res = number.quantize(accuracy)
+    return res
+
+
 try:
     num = decimal.Decimal(float(input(f'Enter {chr(8477)} number: ').replace(',', '.')))
     d = decimal.Decimal(input('Enter the required accuracy "0.0001": ').replace(',', '.'))
-    print(num.quantize(d))
+    print(accurate_number(num, d))
 except ValueError:
     winsound.PlaySound('SystemHand', winsound.SND_ALIAS)
     r = '\033[31m'
@@ -26,5 +32,3 @@ except decimal.InvalidOperation:
     r = '\033[31m'
     print(f"{chr(10071)} {r}Error in decimal module. Please enter only real, float, not symbols numbers. ',' or '.' "
           f"are allowed to use as delimiters.")
-
-
